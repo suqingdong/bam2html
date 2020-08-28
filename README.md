@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4005608.svg)](https://doi.org/10.5281/zenodo.4005608)
+
+
 # Generate Highlighted HTML of Bam
 > highlight the specific sites of html which output by `samtools tview`
 
