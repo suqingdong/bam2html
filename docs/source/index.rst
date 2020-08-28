@@ -7,7 +7,22 @@
 Bam2HTML |version| Documentation
 ====================================
 Bam2HTML is a tool to generate highlighted html file from bam, which is based on
-the command `samtools tview`.
+the command `samtools tview`_.
+
+.. _samtools tview: http://www.htslib.org/doc/samtools-tview.html
+
+
+Installation Guide
+==================
+.. toctree::
+   :caption: Installation
+   :hidden:
+
+   installation
+
+:doc:`installation`
+   The guide of installation
+
 
 
 API Reference
