@@ -78,10 +78,10 @@ def parse_position(position, column):
         pos_list = [pos]
     else:
         if '-' in pos_info:
-            start, end = map(int, pos_info.split('-'))
+            start, end = list(map(int, pos_info.split('-')))
             pos_list = range(start, end + 1)
         elif ',' in pos_info:
-            pos_list = map(int, pos_info.split(','))
+            pos_list = list(map(int, pos_info.split(',')))
             start = min(pos_list)
             end = max(pos_list)
         else:

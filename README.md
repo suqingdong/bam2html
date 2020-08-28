@@ -14,7 +14,14 @@ bam2html <input.bam> chrom:pos           # single position
 bam2html <input.bam> chrom:pos1,pos2...  # multiple positions
 bam2html <input.bam> chrom:start-end     # a region of positions
 bam2html <input.bam> chrom:pos -r /path/to/reference.fa # with reference
+bam2html <input.bam> chrom:pos -c 300    # set the width of window
+bam2html <input.bam> chrom:pos -color pink -bg green    # set colors
 ```
+
+### Example Results
+- single position: [demo.1_985460.html](example/demo.1_985460.html)
+- multiple positions: [demo.1_985460,985463,985469.html](example/demo.1_985460,985463,985469.html)
+- region positions: [demo.1_985461-985465.html](example/demo.1_985461-985465.html)
 
 ## Meaning of Base's Colors
 | Color | Mapping Quality | Selector |
@@ -26,3 +33,6 @@ bam2html <input.bam> chrom:pos -r /path/to/reference.fa # with reference
 
 > Underline: Secondary or orphan
 
+## Documents
+> https://bam2html.readthedocs.io
+> 
