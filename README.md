@@ -13,12 +13,13 @@
 
 ## Usage
 ```bash
-bam2html <input.bam> chrom:pos           # single position
-bam2html <input.bam> chrom:pos1,pos2...  # multiple positions
-bam2html <input.bam> chrom:start-end     # a region of positions
-bam2html <input.bam> chrom:pos -r /path/to/reference.fa # with reference
-bam2html <input.bam> chrom:pos -c 300    # set the width of window
-bam2html <input.bam> chrom:pos -color pink -bg green    # set colors
+bam2html -b <input.bam> chrom:pos           # single position
+bam2html -b <input.bam> chrom:pos1,pos2...  # multiple positions
+bam2html -b <input.bam> chrom:start-end     # a region of positions
+bam2html -b <input.bam> chrom:pos -r /path/to/reference.fa # with reference
+bam2html -b <input.bam> chrom:pos -c 300    # set the width of window
+bam2html -b <input.bam> chrom:pos -color pink -bg green    # set colors
+bam2html -bl bam_list pos_list                             # batch
 ```
 
 
