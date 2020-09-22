@@ -26,8 +26,11 @@ def main():
     
     parser.add_argument('-v', '--version', help='show program\'s version number and exit', action='version', version=__version__)
 
-    parser.add_argument('bam', help='the input bamfile', nargs='?')
-    parser.add_argument('positions', help='the positions or regions to highlight', nargs='*')
+    bam = parser.add_mutually_exclusive_group()
+    bam.add_argument('-b', '--bam', help='the input bamfile', nargs='?')
+    bam.add_argument('-bl', '--bam-list', help='a bam list file', nargs='?')
+
+    parser.add_argument('positions', help='the positions or regions to highlight, or a file', nargs='*')
 
     parser.add_argument('-r', '--reference', help='the reference genome')
     parser.add_argument('-c', '--column',
@@ -47,7 +50,7 @@ def main():
 
     args = parser.parse_args()
 
-    if not (args.bam and args.positions):
+    if not ((args.bam or args.bam_list) and args.positions):
         parser.print_help()
         exit()
 
