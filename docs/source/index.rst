@@ -24,6 +24,17 @@ Installation Guide
    The guide of installation
 
 
+Tutorials
+=========
+.. toctree::
+   :caption: Tutorials
+   :hidden:
+
+   tutorials
+
+:doc:`tutorials`
+   Example tutorials
+
 
 API Reference
 =============
