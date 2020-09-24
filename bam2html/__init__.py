@@ -24,6 +24,8 @@ examples:
     %(prog)s -b input.bam 1:1234-1238
     %(prog)s -b input.bam 1:1234-1238
     %(prog)s -bl bam_list.txt pos_list.txt
+    %(prog)s -bl bam_list.txt pos_list.txt -s
+    %(prog)s -bl bam_list.txt pos_list.txt -s -x zip
 \x1b[36m
 contact: {__author__} <{__author_email__}>\
 \x1b[0m'''.format(**locals())
