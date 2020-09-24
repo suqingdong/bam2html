@@ -1,4 +1,6 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4005608.svg)](https://doi.org/10.5281/zenodo.4005608)
+[![DOI](https://zenodo.org/badge/291003590.svg)](https://doi.org/10.5281/zenodo.4005607)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/suqingdong/bam2html)
+
 
 
 # Generate Highlighted HTML of Bam
