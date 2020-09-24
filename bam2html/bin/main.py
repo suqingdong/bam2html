@@ -37,8 +37,11 @@ def main():
                         help='the size of column window [%(default)s]', type=int, default=200)
 
     parser.add_argument('-O', '--outdir',
-                        help='the output directory [%(default)s]', default='.')
+                        help='the output directory [%(default)s]', default='result')
     parser.add_argument('-o', '--prefix', help='the prefix of output file')
+
+    parser.add_argument('-s', '--summary', help='generate summary html for batch', action='store_true')
+    parser.add_argument('-x', '--compress', help='compress the result', choices=['tar.gz', 'zip'])
 
     parser.add_argument('-color', '--color',
                         help='the color highlighted base [%(default)s]', default='red')
@@ -54,7 +57,7 @@ def main():
         parser.print_help()
         exit()
 
-    Bam2HTML(**vars(args)).highlight()
+    Bam2HTML(**vars(args)).highlight(summary=args.summary, compress=args.compress)
 
 
 if __name__ == '__main__':
