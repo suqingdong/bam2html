@@ -10,7 +10,7 @@ from bam2html.util.template import TEMPLATE
 colorama.init()
 
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 __author__ = 'suqingdong'
 __author_email__ = 'suqingdong@novogene.com'
@@ -64,8 +64,8 @@ class Bam2HTML(object):
             else:
                 position_list += [pos]
 
-        print(bam_list)
-        print(position_list)
+        print('>>> input bam:\n{}'.format('\n'.join(bam_list)))
+        print('>>> input pos:\n{}'.format('\n'.join(position_list)))
 
         if not os.path.exists(self.outdir):
             os.makedirs(self.outdir)
@@ -97,8 +97,10 @@ class Bam2HTML(object):
             with util.safe_open(summary_file, 'w') as out:
                 out.write(TEMPLATE.safe_substitute(DATA=json.dumps(summary_data)))
             print('save summary: {}'.format(summary_file))
- 
-        if compress == 'tar.gz':
+
+        if compress is None:
+            return
+        elif compress == 'tar.gz':
             cmd = 'tar -zcvf {0}.tar.gz {0}'.format(self.outdir)
         elif compress == 'zip':
             cmd = 'zip -r {0}.zip {0}'.format(self.outdir)
