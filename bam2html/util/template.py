@@ -14,7 +14,14 @@ TEMPLATE = string.Template('''\
     main .container {
       margin-top: 50px;
     }
+    footer {
+      font-style: italic;
+    }
+    footer a {
+      color: darkgrey;
+    }
     footer a:hover {
+      color: red;
       text-decoration: none;
     }
   </style>
@@ -27,9 +34,11 @@ TEMPLATE = string.Template('''\
     </div>
   </main>
 
-  <footer class="footer text-center">
+  <footer class="footer text-center text-muted">
     <div class="container">
-      <a href="mailto:suqingdong@novogene.com"><i class="text-muted">contact: suqingdong@novogene.com</i></a>
+      <a href="mailto:suqingdong@novogene.com">contact: suqingdong@novogene.com</a>
+      <br>
+      <a target="_blank" href="https://github.com/suqingdong/bam2html">source: https://github.com/suqingdong/bam2html</a>
     </div>
   </footer>
 </body>
