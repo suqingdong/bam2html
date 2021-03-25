@@ -1,5 +1,5 @@
 {
-    "version": "1.0.4",
+    "version": "1.0.5",
     "prog": "bam2html",
     "desc": "View Bam in Highlighted HTML",
     "author": "suqingdong",

@@ -159,6 +159,9 @@ def parse_html(html, pos_list, new_title, css=None):
 
         
         spans = re.findall(r'(<span.*?)<br/>', line)
+        if len(spans) == 1:
+            print('no reads covered')
+            return html
 
         # the last span has no <br/>
         last_span = re.findall(r'<br/>(<span[^(br)]*?</span>)</pre>', line)[-1]
