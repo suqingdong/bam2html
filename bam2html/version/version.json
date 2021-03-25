@@ -1,0 +1,7 @@
+{
+    "version": "1.0.4",
+    "prog": "bam2html",
+    "desc": "View Bam in Highlighted HTML",
+    "author": "suqingdong",
+    "author_email": "1078595229@qq.com"
+}

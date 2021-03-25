@@ -1,18 +1,20 @@
 # -*- encoding: utf8 -*-
 import os
+import json
 from setuptools import setup, find_packages
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-from bam2html import __version__, __author__, __author_email__
+
+version_info = json.load(open(os.path.join('bam2html', 'version', 'version.json')))
 
 
 setup(
     name='bam2html',
-    version=__version__,
-    author=__author__,
-    author_email=__author_email__,
-    description='Generate Highlighted HTML for BAM',
+    version=version_info['version'],
+    author=version_info['author'],
+    author_email=version_info['author_email'],
+    description=version_info['desc'],
     long_description=open(os.path.join(BASE_DIR, 'README.md')).read(),
     long_description_content_type="text/markdown",
     url='https://github.com/suqingdong/bam2html',

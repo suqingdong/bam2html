@@ -9,11 +9,31 @@
                     -- View Bam in Highlighted HTML
 ====================================================
 \x1b[0m"""
-
-
+import os
+import json
 import argparse
 
-from bam2html import Bam2HTML, __epilog__, __version__
+from bam2html import version_info
+from bam2html.core import Bam2HTML
+
+
+
+
+__epilog__ = '''\x1b[34m
+examples:
+    %(prog)s
+    %(prog)s -b input.bam 1:1234 -r /path/to/reference.fa
+    %(prog)s -b input.bam 1:1234 2:4567
+    %(prog)s -b input.bam 1:1234,1236,1238
+    %(prog)s -b input.bam 1:1234-1238
+    %(prog)s -b input.bam 1:1234-1238
+    %(prog)s -bl bam_list.txt pos_list.txt
+    %(prog)s -bl bam_list.txt pos_list.txt -s
+    %(prog)s -bl bam_list.txt pos_list.txt -s -x zip
+\x1b[36m
+contact: {author} <{author_email}>\
+\x1b[0m'''.format(**version_info)
+
 
 
 def main():
@@ -24,7 +44,7 @@ def main():
         epilog=__epilog__,
         formatter_class=argparse.RawTextHelpFormatter)
     
-    parser.add_argument('-v', '--version', help='show program\'s version number and exit', action='version', version=__version__)
+    parser.add_argument('-v', '--version', help='show program\'s version number and exit', action='version', version=version_info['version'])
 
     bam = parser.add_mutually_exclusive_group()
     bam.add_argument('-b', '--bam', help='the input bamfile', nargs='?')

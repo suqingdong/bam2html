@@ -2,13 +2,13 @@
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/suqingdong/bam2html)
 
 # Generate Highlighted HTML of Bam
-> highlight the specific sites of html which output by `samtools tview`
+> highlight the specific sites of bam with `samtools tview`
 
 
 ## Dependencies
 - Linux/Unix
-- Samtools
 - Python2/Python3
+- samtools
 - tar/gzip/zip [optional for compressing]
 
 

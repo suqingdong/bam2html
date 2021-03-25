@@ -1,1 +1,2 @@
 include requirements.txt
+include bam2html/version/version.json
